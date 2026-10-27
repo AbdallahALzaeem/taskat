@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الفاتورة</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+
+    <h1 class="text-2xl font-bold mb-4">الفاتورة</h1>
+
+    <!-- 1) إدخال اسم المنتج والسعر + زر الإضافة -->
+    <div class="flex gap-2 mb-4">
+      <input id="productName" type="text" placeholder="اسم المنتج" class="flex-1 border rounded p-2">
+      <input id="productPrice" type="number" placeholder="السعر" class="w-24 border rounded p-2">
+      <button id="addButton" class="bg-green-600 text-white px-4 rounded text-xl">+</button>
+    </div>
+
+    <!-- 2) قائمة المنتجات -->
+    <ul id="productsList" class="mb-4"></ul>
+
+    <!-- 3) كوبون الخصم -->
+    <div class="flex gap-2 mb-4">
+      <input id="couponInput" type="text" placeholder="كوبون الخصم" class="flex-1 border rounded p-2">
+      <button id="couponButton" class="bg-blue-600 text-white px-4 rounded">تطبيق الكوبون</button>
+    </div>
+
+    <!-- 4) زر الفاتورة وزر سكر المعبر -->
+    <div class="flex gap-2 mb-4">
+      <button id="invoiceButton" class="flex-1 bg-gray-800 text-white p-2 rounded">إنشاء فاتورة</button>
+      <button id="crossingButton" class="flex-1 bg-orange-500 text-white p-2 rounded">سكر المعبر</button>
+    </div>
+
+    <!-- 5) مكان عرض الفاتورة -->
+    <div id="invoiceBox"></div>
+
+  </div>
+
+  <!-- ملف الجافاسكريبت -->
+  <script src="script.js"></script>
+</body>
+</html>
